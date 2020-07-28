@@ -8,7 +8,7 @@
 This topic covers basic steps on how to create a monolithic web app into microservices, Deploying and exposing microservices deployed on GKE 
 
 ## Prerequisite
-I would recommend people to go through Hands-on-Lab on building a Website on Google Cloud to get familiar, so that you will confidence on completing the challenge lab without scrolling down.
+I would recommend to go through Hands-on-Lab on building a Website on Google Cloud to get familiar, so that you will familiarize yourself on completing the challenge lab without scrolling down.
 
 
 Basic knowledge on GCP would be handy.
