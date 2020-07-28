@@ -16,7 +16,12 @@ We have provided a sample Day Journey entry staring at 0. You can delete this ex
 
 ## Madhan's Cloud Journey
 
-[✍️ Introduce yourself]
+[✍️ Hi, I am Madhan, Enterprise Content Management developer based out on Chennai. 
+
+I was clueless as I really wanted to learn a new technology, but I don’t know which one to choose. At that time, I came across Cloud challenge by Google after that I decided my pave my aspiration path towards cloud and who would not do if it is for free.
+I started to search for cloud related learnings, webinars, challenges and I eventually ended up where I want to be, The “100DaysofCloud” community. I have never seen a community like this before, which has extra ordinary people and who are too helpful to groom my knowledge. 
+I am positive that, I will gain more knowledge with the help from this community.
+As of now, I am in top 70 among 54639 participants in CloudDevJam Challenge by Google.]
 
 [✍️ Tell us why you started this challenge]
 
