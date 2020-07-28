@@ -39,36 +39,23 @@ Log in to your new project, open up Cloud Shell.
 
 First you need to clone the team's git repo. There's a setup.sh script in the root directory of the project that you'll need to run to get your monolith container built up.
 
-#git clone https://github.com/googlecodelabs/monolith-to-microservices.git
+![s1](https://user-images.githubusercontent.com/55656091/88682807-bc79c400-d110-11ea-805b-972a6fa08a2e.JPG)
 
 Next, Run the setup.sh to install the NodeJS dependencies for the monolith code
 
-![s2](https://user-images.githubusercontent.com/55656091/88681088-d31f1b80-d10e-11ea-9060-4a0a729962d9.JPG)
+![s2](https://user-images.githubusercontent.com/55656091/88682844-c7ccef80-d110-11ea-862a-e6382adb16ae.JPG)
 
 Before building the Docker container, you can preview the monolith application on port 8080 by running the following commands to start the web server:
 
-![s3](https://user-images.githubusercontent.com/55656091/88681839-a0295780-d10f-11ea-8264-28b83b1bce3c.JPG)
-
+![s3](https://user-images.githubusercontent.com/55656091/88682923-dd421980-d110-11ea-8675-cb16b3011de0.JPG)
 
 Next Push the monolith build (conveniently located in the monolith directory) up to the Google Container Registry. There's a Dockerfile located in the ~/monotlith-to-microservices/monolith folder which you can use to build the application container.
 
 You will have to run Cloud Build (in that monolith folder) to build it, then push it up to GCR.
 
-Hint:
+To complete the Cloud Build API and submit a build named fancytest with a version of 1.0.0 use the following commands:
 
-Make sure that you submit a build named "fancytest" with a version of "1.0.0".
-
-![Gcr](https://user-images.githubusercontent.com/55656091/88678209-d49b1480-d10b-11ea-9baf-6a289e7b669c.JPG)
-
-Next, enable the Cloud Build API and submit a build named fancytest with a version of 1.0.0 using the following commands:
-
-![s4](https://user-images.githubusercontent.com/55656091/88682082-e5e62000-d10f-11ea-8ddf-c92f15658aff.JPG)
-
-
-
-Solution:
-
-
+![s4](https://user-images.githubusercontent.com/55656091/88683255-37db7580-d111-11ea-8470-0a2a67ccc00b.JPG)
 
 ### Step 2 — Create a kubernetes cluster and deploy the application
 
