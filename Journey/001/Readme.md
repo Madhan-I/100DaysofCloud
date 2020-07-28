@@ -1,9 +1,9 @@
-**Add a cover photo like:**
-![placeholder image](https://via.placeholder.com/1200x600)
+![pic 1](https://user-images.githubusercontent.com/55656091/88679033-abc74f00-d10c-11ea-802c-5c2319144e04.JPG)
+
 
 # Build a Website using Google Kubernetes Engine on Google Cloud
 
-## We are going to see on how to create a website on google cloud using Google Kubernetes Engine and also to complete the Challenge lab in Qwiklabs.
+## We are going to create a website on google cloud using Google Kubernetes Engine with steps to complete the Challenge lab in Qwiklabs.
 
 This topic covers basic steps on how to create a monolithic web app into microservices, Deploying and exposing microservices deployed on GKE 
 
@@ -40,20 +40,95 @@ Push the monolith build (conveniently located in the monolith directory) up to t
 
 You will have to run Cloud Build (in that monolith folder) to build it, then push it up to GCR.
 
-Name your artifact as follows:
-![alt text]
-
-Hint:
+![Gcr](https://user-images.githubusercontent.com/55656091/88678209-d49b1480-d10b-11ea-9baf-6a289e7b669c.JPG)
 
 Make sure that you submit a build named "fancytest" with a version of "1.0.0".
 
 ![Screenshot](https://via.placeholder.com/500x300)
 
-### Step 1 — Summary of Step
+### Step 2 — Create a kubernetes cluster and deploy the application
+
+Now that you have the image created and sitting in the container registry, it's time to create a cluster to deploy it to.
+
+You've been told to deploy all of your resources in the us-central1-a zone, so first you'll need to create a GKE cluster for it. Start with a 3 node cluster to begin with.
+
+Create your cluster as follows:
+
+Create and expose your deployment as follows:
+
+Make note of the IP address that is assigned in the expose deployment operation. You should now be able to visit this IP address from your browser!
+
+Hint:
+
+Make sure your deployment is named "fancytest", and that you have exposed the service on port 80, and mapped it to port 8080.
+
 
 ![Screenshot](https://via.placeholder.com/500x300)
 
-### Step 3 — Summary of Step
+### Step 3 — Create a containerized version of your Microservices
+
+Below is the set of services which need to be containerized. Navigate to the source roots mentioned below, and upload the artifacts which are created to the Google Container Registry with the metadata indicated.
+
+Hint:
+
+Make sure that you submit a build named "orders" with a version of "1.0.0", AND a build named "products" with a version of "1.0.0".
+
+### Step 4 — Deploy the new microservices
+
+Deploy these new containers following the same process that you followed for the "fancytest" monolith. Note that these services will be listening on different ports, so make note of the port mappings in the table below.
+
+Create and expose your deployments as follows:
+
+NOTE: Please make note of the IP address of both the Orders and Products services once they have been exposed, you will need them in future steps.
+
+You can verify that the deployments were successful and that the services have been exposed by going to the following URLs in your browser:
+
+http://ORDERS_EXTERNAL_IP/api/orders
+
+http://PRODUCTS_EXTERNAL_IP/api/products
+
+You will see each service return a JSON string if the deployments were successful.
+
+Hint:
+
+Make sure your deployments are named "orders" and "products", and that you see the services exposed on port 80.
+
+Configure and deploy the Frontend Microservice
+Now that you have extracted both the Orders and Products microservice, you need to configure the Frontend service to point to them, and get it deployed.
+
+### Step 5 — Configure the Frontend microservice
+
+Reconfigure Frontend
+Use the nano editor to replace the local URL with the IP address of the new Products microservices:
+
+When the editor opens, your file should look like this:
+
+Replace the REACT_APP_PRODUCTS_URL to the new format while replacing with your Orders and Product microservice IP addresses so it matches below:
+
+Press __CTRL+O__, press __ENTER__, then __CTRL+X__ to save the file in the nano editor.
+
+Now rebuild the frontend app before containerizing it:
+
+### Step 6 — Create a containerized version of the Frontend microservice
+
+With the Orders and Products microservices now containerized and deployed, and the Frontend service configured to point to them, the final step is to containerize and deploy the Frontend.
+
+Use Cloud Build to package up the contents of the Frontend service and push it up to the Google Container Registry.
+
+
+
+Hint:
+
+Make sure that you submit a build named "frontend" with a version of "1.0.0".
+
+### Step 7 — Deploy the Frontend microservice
+
+Deploy this container following the same process that you followed for the "Orders" and "Products" microservices.
+
+Create and expose your deployment as follows:
+
+You can verify that the deployment was successful and that the microservices have been properly exposed by hitting the following the IP address of the frontend service in your browser: You will see the Fancy Store homepage, with links to the Products and Orders pages powered by your new microservices.
+
 
 ![Screenshot](https://via.placeholder.com/500x300)
 
