@@ -61,13 +61,11 @@ COMMAND:
 
 Now that you have created the image and it is in container registry, it's time to create a cluster to deploy it to.
 
-You've been told to deploy all of your resources in the us-central1-a zone, so first you'll need to create a GKE cluster for it. Start with a 3 node cluster to begin with.
+Create the resources in us-central1-a zone, before that you'll need to create a GKE cluster named as "fancy-cluster". Start with a 3 node cluster to begin with.
 
 Create your cluster as follows:
 
 ![S6](https://user-images.githubusercontent.com/55656091/88684388-6efe5680-d112-11ea-92f7-8a4c123e8733.JPG)
-
-Create the resources in the us-central1-a zone, with cluster named as named "fancy-cluster". 
 
 COMMAND:
 
@@ -79,13 +77,13 @@ Create and expose your deployment as follows:
 
 ![S7](https://user-images.githubusercontent.com/55656091/88684582-a79e3000-d112-11ea-804a-5c2076ee099b.JPG)
 
-Make note of the IP address that is assigned in the expose deployment operation. You should now be able to visit this IP address from your browser!
+Make note of the IP address that is assigned in the expose deployment. You should now be able to visit this IP address from your browser!
 
 You should see the following:
 
 ![s9](https://user-images.githubusercontent.com/55656091/88685971-2e074180-d114-11ea-9510-ad4b3dfdd4df.JPG)
 
-After the cluster is ready, you need to deploy the application. Make sure that you name the deployment to be “fancytest” expose the service on port 80 and map it to port 8080.
+After the cluster is ready, you need to deploy the application. Make sure that you name the deployment to be “fancytest”, expose the service on port 80 and map it to port 8080.
 
 COMMAND:
 
@@ -93,18 +91,18 @@ COMMAND:
 
 ### Step 3 — Create a containerized version of your Microservices
 
-Create New Microservices
-There are 3 services that need to be broken out into their own containers. Since you are moving all of the services into containers, you need to track the following information for each service:
+There are 3 services that need to be broken out into their own containers. 
+Since you are moving all of the services into containers, you need to track the following information for each service:
 
-The root folder of the service (where you will build the container)
-The repository you will upload the container to
-The name & version of the container artifact
+ - The root folder of the service (where you will build the container)
+ - The repository you will upload the container to
+ - The name & version of the container artifact
 
 Below is the set of services which need to be containerized. Navigate to the source roots mentioned below, and upload the artifacts which are created to the Google Container Registry with the metadata indicated.
 
 ![T2](https://user-images.githubusercontent.com/55656091/88688225-b850a500-d116-11ea-9c9f-1553f44f4e54.JPG)
 
-To complete the steps, use below command to Submit a build named "orders" with a version of "1.0.0"
+To complete the above steps, use below command to Submit a build named "orders" with a version of "1.0.0"
 
 COMMMAND:
 
@@ -118,13 +116,13 @@ COMMMAND:
 
 ### Step 4 — Deploy the new microservices
 
-Deploy these new containers following the same process that you followed for the "fancytest" monolith. Note that these services will be listening on different ports, so make note of the port mappings in the table below.
+Deploy these new containers following the same process that you followed for the "fancytest" monolith. 
 
 Create and expose your deployments as follows:
 
 ![t5](https://user-images.githubusercontent.com/55656091/88689893-aff96980-d118-11ea-9a63-5a7be7e59eb1.JPG)
 
-NOTE: Please make note of the IP address of both the Orders and Products services once they have been exposed, you will need them in future steps.
+NOTE: Please make note of the IP address of both Orders and Products services once they have been exposed, you will need them in future steps.
 
 Name the deployment to be “orders” and “products”, and expose the services on port 80.
 
@@ -141,7 +139,7 @@ COMMAND to Check IP Address for Orders and Products:
 kubectl get all
 
 
-You can verify the deployments were successful and the services have been exposed by going to the following URLs in your browser:
+You can verify whether the deployments are successful and the services have been exposed by going to the following URLs in your browser:
 
 http://ORDERS_EXTERNAL_IP/api/orders
 
