@@ -24,11 +24,7 @@ Basic knowledge on GCP would be handy.
 
 ## Try yourself
 
-✍️ We will be completing below steps, Hope its useful.
-
-- Building and refactoring a monolithic web app into microservices
-- Deploying microservices in GKE
-- Exposing the Services deployed on GKE
+✍️ We will be completing with below steps, Hope it's useful.
 
 ### Step 1 — Download the monolith code and build your container
 
