@@ -77,9 +77,11 @@ Create your cluster as follows:
 
 ![S6](https://user-images.githubusercontent.com/55656091/88684388-6efe5680-d112-11ea-92f7-8a4c123e8733.JPG)
 
-Hint:
+create the resources in the us-central1-a zone, with cluster named as named "fancy-cluster". 
 
-Make sure your cluster is named "fancy-cluster", and is in the running state in us-central1-a.
+To set the default zone and create the Kubernetes cluster use below command:
+
+![s8](https://user-images.githubusercontent.com/55656091/88685775-f00a1d80-d113-11ea-9d97-a9caba21d52b.JPG)
 
 Now that you've built up an image, and have a cluster up and running, it's time to deploy your application.
 
@@ -89,9 +91,17 @@ Create and expose your deployment as follows:
 
 Make note of the IP address that is assigned in the expose deployment operation. You should now be able to visit this IP address from your browser!
 
-Hint:
+You should see the following:
 
-Make sure your deployment is named "fancytest", and that you have exposed the service on port 80, and mapped it to port 8080.
+![s9](https://user-images.githubusercontent.com/55656091/88685971-2e074180-d114-11ea-9510-ad4b3dfdd4df.JPG)
+
+After the cluster is ready, you need to deploy the application. Make sure that you
+
+name the deployment to be “fancytest” expose the service on port 80 and map it to port 8080.
+
+![t1](https://user-images.githubusercontent.com/55656091/88686223-80486280-d114-11ea-874f-675ecf2533d5.JPG)
+
+
 
 
 ![Screenshot](https://via.placeholder.com/500x300)
