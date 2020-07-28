@@ -95,26 +95,36 @@ You should see the following:
 
 ![s9](https://user-images.githubusercontent.com/55656091/88685971-2e074180-d114-11ea-9510-ad4b3dfdd4df.JPG)
 
-After the cluster is ready, you need to deploy the application. Make sure that you
-
-name the deployment to be “fancytest” expose the service on port 80 and map it to port 8080.
+After the cluster is ready, you need to deploy the application. Make sure that you name the deployment to be “fancytest” expose the service on port 80 and map it to port 8080.
 
 COMMAND:
 
 ![t1](https://user-images.githubusercontent.com/55656091/88686223-80486280-d114-11ea-874f-675ecf2533d5.JPG)
 
-
-
-
-![Screenshot](https://via.placeholder.com/500x300)
-
 ### Step 3 — Create a containerized version of your Microservices
+
+Create New Microservices
+There are 3 services that need to be broken out into their own containers. Since you are moving all of the services into containers, you need to track the following information for each service:
+
+The root folder of the service (where you will build the container)
+The repository you will upload the container to
+The name & version of the container artifact
 
 Below is the set of services which need to be containerized. Navigate to the source roots mentioned below, and upload the artifacts which are created to the Google Container Registry with the metadata indicated.
 
-Hint:
+![T2](https://user-images.githubusercontent.com/55656091/88688225-b850a500-d116-11ea-9c9f-1553f44f4e54.JPG)
 
-Make sure that you submit a build named "orders" with a version of "1.0.0", AND a build named "products" with a version of "1.0.0".
+Submit a build named "orders" with a version of "1.0.0", AND a build named "products" with a version of "1.0.0".
+
+COMMMAND:
+
+![T3](https://user-images.githubusercontent.com/55656091/88688562-18dfe200-d117-11ea-9f45-0586cace468f.JPG)
+
+Similarly, repeat the step for the Products Microservice:
+
+COMMMAND:
+
+![T4](https://user-images.githubusercontent.com/55656091/88688565-19787880-d117-11ea-8129-abf2f59d3bdb.JPG)
 
 ### Step 4 — Deploy the new microservices
 
