@@ -16,7 +16,7 @@ We have provided a sample Day Journey entry staring at 0. You can delete this ex
 
 ## Madhan's Cloud Journey
 
-Hi, I am Madhan, Enterprise Content Management developer based out on Chennai. 
+Hi, I am Madhan, a Enterprise Content Management developer based out in Chennai. 
 
 - I was clueless as I really wanted to learn a new technology, but I don’t know which one to choose. At that time, I came across Cloud challenge by Google after that I decided my pave my aspiration path towards cloud and who would not do if it is for free.
 
@@ -24,7 +24,7 @@ Hi, I am Madhan, Enterprise Content Management developer based out on Chennai.
 
 - I am positive that, I will gain more knowledge with the help from this community.
 
-- As of now, I am in top 70 among 54639 participants in CloudDevJam Challenge by Google.
+- As of now, I am in top 70 among 54639 participants in CloudDevJam Challenge by Google and Techgig.
 
 - https://twitter.com/Madhan2712
 - https://www.linkedin.com/in/madhan-i-58241670/
