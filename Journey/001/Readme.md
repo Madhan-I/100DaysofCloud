@@ -50,8 +50,6 @@ COMMAND:
 
 Next Push the monolith build up to the Google Container Registry. There's a Dockerfile located in the ~/monotlith-to-microservices/monolith folder which can be used to build the application container.
 
-You will have to run Cloud Build (in that monolith folder) to build it, then push it up to GCR.
-
 Name your artifact as follows:
 
 ![S5](https://user-images.githubusercontent.com/55656091/88684300-54c47880-d112-11ea-8ceb-cd3c38c68408.JPG)
