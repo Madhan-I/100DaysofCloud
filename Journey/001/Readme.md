@@ -57,9 +57,7 @@ COMMAND:
 
 Next Push the monolith build (conveniently located in the monolith directory) up to the Google Container Registry. There's a Dockerfile located in the ~/monotlith-to-microservices/monolith folder which you can use to build the application container.
 
-You will have to run Cloud Build named fancytest with a version of 1.0.0 (in that monolith folder) to build it, then push it up to GCR.
-
-HINT: 
+You will have to run Cloud Build (in that monolith folder) to build it, then push it up to GCR.
 
 Name your artifact as follows:
 
