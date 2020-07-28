@@ -77,9 +77,9 @@ Create your cluster as follows:
 
 ![S6](https://user-images.githubusercontent.com/55656091/88684388-6efe5680-d112-11ea-92f7-8a4c123e8733.JPG)
 
-create the resources in the us-central1-a zone, with cluster named as named "fancy-cluster". 
+Create the resources in the us-central1-a zone, with cluster named as named "fancy-cluster". 
 
-To set the default zone and create the Kubernetes cluster use below command:
+COMMAND:
 
 ![s8](https://user-images.githubusercontent.com/55656091/88685775-f00a1d80-d113-11ea-9d97-a9caba21d52b.JPG)
 
@@ -98,6 +98,8 @@ You should see the following:
 After the cluster is ready, you need to deploy the application. Make sure that you
 
 name the deployment to be “fancytest” expose the service on port 80 and map it to port 8080.
+
+COMMAND:
 
 ![t1](https://user-images.githubusercontent.com/55656091/88686223-80486280-d114-11ea-874f-675ecf2533d5.JPG)
 
