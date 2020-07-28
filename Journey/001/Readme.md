@@ -15,15 +15,8 @@ Basic knowledge on GCP would be handy.
 
 ## Use Case
 
-- 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
-
 - Your task is to take the company's existing monolithic e-commerce website and break it into a series of logically separated microservices. The existing monolith code is sitting in a GitHub repo, and you will be expected to containerize this app and then refactor it.
 - You will be tasked with pulling down the source code, building a container from it (one of the farmers left you a Dockerfile), and then pushing it out to GKE
-
-## Cloud Research
-
-- ✍️ Document your trial and errors. Share what you tried to learn and understand about the cloud topic or while completing micro-project.
-- 🖼️ Show as many screenshot as possible so others can experience in your cloud research.
 
 ## Try yourself
 
@@ -55,7 +48,7 @@ COMMAND:
 
 ![s3](https://user-images.githubusercontent.com/55656091/88682923-dd421980-d110-11ea-8675-cb16b3011de0.JPG)
 
-Next Push the monolith build (conveniently located in the monolith directory) up to the Google Container Registry. There's a Dockerfile located in the ~/monotlith-to-microservices/monolith folder which you can use to build the application container.
+Next Push the monolith build up to the Google Container Registry. There's a Dockerfile located in the ~/monotlith-to-microservices/monolith folder which can be used to build the application container.
 
 You will have to run Cloud Build (in that monolith folder) to build it, then push it up to GCR.
 
@@ -69,7 +62,7 @@ COMMAND:
 
 ### Step 2 — Create a kubernetes cluster and deploy the application
 
-Now that you have the image created and sitting in the container registry, it's time to create a cluster to deploy it to.
+Now that you have created the image and it is in container registry, it's time to create a cluster to deploy it to.
 
 You've been told to deploy all of your resources in the us-central1-a zone, so first you'll need to create a GKE cluster for it. Start with a 3 node cluster to begin with.
 
@@ -114,13 +107,13 @@ Below is the set of services which need to be containerized. Navigate to the sou
 
 ![T2](https://user-images.githubusercontent.com/55656091/88688225-b850a500-d116-11ea-9c9f-1553f44f4e54.JPG)
 
-Submit a build named "orders" with a version of "1.0.0", AND a build named "products" with a version of "1.0.0".
+To complete the steps, use below command to Submit a build named "orders" with a version of "1.0.0"
 
 COMMMAND:
 
 ![T3](https://user-images.githubusercontent.com/55656091/88688562-18dfe200-d117-11ea-9f45-0586cace468f.JPG)
 
-Similarly, repeat the step for the Products Microservice:
+Similarly, repeat the step for build named "products" with a version of "1.0.0"
 
 COMMMAND:
 
@@ -132,7 +125,13 @@ Deploy these new containers following the same process that you followed for the
 
 Create and expose your deployments as follows:
 
+![t5](https://user-images.githubusercontent.com/55656091/88689893-aff96980-d118-11ea-9a63-5a7be7e59eb1.JPG)
+
 NOTE: Please make note of the IP address of both the Orders and Products services once they have been exposed, you will need them in future steps.
+
+COMMAND to check the IP address:
+
+kubectl get all
 
 You can verify that the deployments were successful and that the services have been exposed by going to the following URLs in your browser:
 
@@ -142,21 +141,23 @@ http://PRODUCTS_EXTERNAL_IP/api/products
 
 You will see each service return a JSON string if the deployments were successful.
 
-Hint:
-
-Make sure your deployments are named "orders" and "products", and that you see the services exposed on port 80.
+### Step 5 — Configure the Frontend microservice
 
 Configure and deploy the Frontend Microservice
 Now that you have extracted both the Orders and Products microservice, you need to configure the Frontend service to point to them, and get it deployed.
 
-### Step 5 — Configure the Frontend microservice
-
 Reconfigure Frontend
 Use the nano editor to replace the local URL with the IP address of the new Products microservices:
 
+![t6](https://user-images.githubusercontent.com/55656091/88690502-5e051380-d119-11ea-99d0-14505fdbf997.JPG)
+
 When the editor opens, your file should look like this:
 
+![t7](https://user-images.githubusercontent.com/55656091/88690505-5e9daa00-d119-11ea-8420-4b2c2de34cd2.JPG)
+
 Replace the REACT_APP_PRODUCTS_URL to the new format while replacing with your Orders and Product microservice IP addresses so it matches below:
+
+![t8](https://user-images.githubusercontent.com/55656091/88690507-5f364080-d119-11ea-8e43-5906c34db62f.JPG)
 
 Press __CTRL+O__, press __ENTER__, then __CTRL+X__ to save the file in the nano editor.
 
