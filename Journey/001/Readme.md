@@ -141,7 +141,8 @@ COMMAND to Check IP Address for Orders and Products:
 
 kubectl get all
 
-You can verify that the deployments were successful and that the services have been exposed by going to the following URLs in your browser:
+
+You can verify the deployments were successful and the services have been exposed by going to the following URLs in your browser:
 
 http://ORDERS_EXTERNAL_IP/api/orders
 
