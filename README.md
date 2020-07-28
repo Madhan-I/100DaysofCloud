@@ -18,7 +18,7 @@ We have provided a sample Day Journey entry staring at 0. You can delete this ex
 
 Hi, I am Madhan, a Enterprise Content Management developer based out in Chennai. 
 
-- I was clueless as I really wanted to learn a new technology, but I don’t know which one to choose. At that time, I came across Cloud challenge by Google after that I decided my pave my aspiration path towards cloud and who would not do if it is for free.
+- I was clueless as I really wanted to learn a new technology, but I don’t know which one to choose. At that time, I came across Cloud challenge by Google after that I decided to my pave my aspiration path towards cloud and who would not do if it is for free.
 
 - I started to search for cloud related learnings, webinars, challenges and I eventually ended up where I want to be, The “100DaysofCloud” community. I have never seen a community like this before, which has extra ordinary people and who are too helpful to groom my knowledge. 
 
