@@ -39,7 +39,7 @@ Log in to your new project, open up Cloud Shell.
 
 First you need to clone the team's git repo. There's a setup.sh script in the root directory of the project that you'll need to run to get your monolith container built up.
 
-![s1](https://user-images.githubusercontent.com/55656091/88680811-850a1800-d10e-11ea-8917-147a2c808d3a.JPG)
+#git clone https://github.com/googlecodelabs/monolith-to-microservices.git
 
 Next, Run the setup.sh to install the NodeJS dependencies for the monolith code
 
