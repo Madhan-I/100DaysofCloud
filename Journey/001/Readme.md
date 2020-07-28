@@ -51,9 +51,15 @@ Before building the Docker container, you can preview the monolith application o
 
 Next Push the monolith build (conveniently located in the monolith directory) up to the Google Container Registry. There's a Dockerfile located in the ~/monotlith-to-microservices/monolith folder which you can use to build the application container.
 
-You will have to run Cloud Build (in that monolith folder) to build it, then push it up to GCR.
+You will have to run Cloud Build named fancytest with a version of 1.0.0 (in that monolith folder) to build it, then push it up to GCR.
 
-To complete the Cloud Build API and submit a build named fancytest with a version of 1.0.0 use the following commands:
+HINT: 
+
+Name your artifact as follows:
+
+![S5](https://user-images.githubusercontent.com/55656091/88684300-54c47880-d112-11ea-8ceb-cd3c38c68408.JPG)
+
+To complete the above step use the below commands:
 
 ![s4](https://user-images.githubusercontent.com/55656091/88683255-37db7580-d111-11ea-8470-0a2a67ccc00b.JPG)
 
@@ -64,8 +70,17 @@ Now that you have the image created and sitting in the container registry, it's 
 You've been told to deploy all of your resources in the us-central1-a zone, so first you'll need to create a GKE cluster for it. Start with a 3 node cluster to begin with.
 
 Create your cluster as follows:
+![S6](https://user-images.githubusercontent.com/55656091/88684388-6efe5680-d112-11ea-92f7-8a4c123e8733.JPG)
+
+Hint:
+
+Make sure your cluster is named "fancy-cluster", and is in the running state in us-central1-a.
+
+Now that you've built up an image, and have a cluster up and running, it's time to deploy your application.
 
 Create and expose your deployment as follows:
+
+![S7](https://user-images.githubusercontent.com/55656091/88684582-a79e3000-d112-11ea-804a-5c2076ee099b.JPG)
 
 Make note of the IP address that is assigned in the expose deployment operation. You should now be able to visit this IP address from your browser!
 
