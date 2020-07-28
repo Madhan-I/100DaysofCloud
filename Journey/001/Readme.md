@@ -129,9 +129,16 @@ Create and expose your deployments as follows:
 
 NOTE: Please make note of the IP address of both the Orders and Products services once they have been exposed, you will need them in future steps.
 
-COMMAND to check the IP address:
+Name the deployment to be “orders” and “products”, and expose the services on port 80.
+Commands to deploy the Orders Microservice:
 
-kubectl get all
+![T9](https://user-images.githubusercontent.com/55656091/88691159-1c289d00-d11a-11ea-9d30-904fd09dc13d.JPG)
+
+Commands to deploy the Products Microservice:
+
+![T91](https://user-images.githubusercontent.com/55656091/88691162-1cc13380-d11a-11ea-8d19-52ba893c1b36.JPG)
+
+COMMAND to Check the IP Address:   kubectl get all
 
 You can verify that the deployments were successful and that the services have been exposed by going to the following URLs in your browser:
 
@@ -143,13 +150,11 @@ You will see each service return a JSON string if the deployments were successfu
 
 ### Step 5 — Configure the Frontend microservice
 
-Configure and deploy the Frontend Microservice
 Now that you have extracted both the Orders and Products microservice, you need to configure the Frontend service to point to them, and get it deployed.
 
-Reconfigure Frontend
 Use the nano editor to replace the local URL with the IP address of the new Products microservices:
 
-![t6](https://user-images.githubusercontent.com/55656091/88690502-5e051380-d119-11ea-99d0-14505fdbf997.JPG)
+![T93](https://user-images.githubusercontent.com/55656091/88691521-96f1b800-d11a-11ea-8d0b-00540bead221.JPG)
 
 When the editor opens, your file should look like this:
 
@@ -159,9 +164,9 @@ Replace the REACT_APP_PRODUCTS_URL to the new format while replacing with your O
 
 ![t8](https://user-images.githubusercontent.com/55656091/88690507-5f364080-d119-11ea-8e43-5906c34db62f.JPG)
 
-Press __CTRL+O__, press __ENTER__, then __CTRL+X__ to save the file in the nano editor.
+Press __CTRL+O__, press __ENTER__, then __CTRL+X__ to save the file in the nano editor and rebuild the frontend app before containerizing it.
 
-Now rebuild the frontend app before containerizing it:
+![T95](https://user-images.githubusercontent.com/55656091/88691828-f9e34f00-d11a-11ea-9717-0cc565cef003.JPG)
 
 ### Step 6 — Create a containerized version of the Frontend microservice
 
