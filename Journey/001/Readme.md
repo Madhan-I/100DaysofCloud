@@ -162,7 +162,7 @@ When the editor opens, your file should look like this:
 
 ![t7](https://user-images.githubusercontent.com/55656091/88690505-5e9daa00-d119-11ea-8420-4b2c2de34cd2.JPG)
 
-Replace the REACT_APP_PRODUCTS_URL to the new format while replacing with your Orders and Product microservice IP addresses so it matches below:
+Replace the URL's to new format while replacing it with Orders and Product microservice IP addresses so it matches below:
 
 ![t8](https://user-images.githubusercontent.com/55656091/88690507-5f364080-d119-11ea-8e43-5906c34db62f.JPG)
 
@@ -176,11 +176,13 @@ With the Orders and Products microservices now containerized and deployed, and t
 
 Use Cloud Build to package up the contents of the Frontend service and push it up to the Google Container Registry.
 
+Submit a build named "frontend" with a version of "1.0.0".
 
+![t96](https://user-images.githubusercontent.com/55656091/88695796-04541780-d120-11ea-9092-4d1ffb062fa4.JPG)
 
-Hint:
+COMMAND:
 
-Make sure that you submit a build named "frontend" with a version of "1.0.0".
+![T98](https://user-images.githubusercontent.com/55656091/88696051-5e54dd00-d120-11ea-9327-2e5874286657.JPG)
 
 ### Step 7 — Deploy the Frontend microservice
 
@@ -188,21 +190,27 @@ Deploy this container following the same process that you followed for the "Orde
 
 Create and expose your deployment as follows:
 
+![t97](https://user-images.githubusercontent.com/55656091/88695801-05854480-d120-11ea-8f0f-226567c7f5c0.JPG)
+
+COMMAND:
+
+![T99](https://user-images.githubusercontent.com/55656091/88696059-5eed7380-d120-11ea-9688-d225e4e107e6.JPG)
+
 You can verify that the deployment was successful and that the microservices have been properly exposed by hitting the following the IP address of the frontend service in your browser: You will see the Fancy Store homepage, with links to the Products and Orders pages powered by your new microservices.
 
 
-![Screenshot](https://via.placeholder.com/500x300)
-
 ## ☁️ Cloud Outcome
 
-✍️ (Result) Describe your personal outcome, and lessons learned.
+✍️ With this challenge, I got familiarized on using microservices on GKE to create a website 
 
 ## Next Steps
 
-✍️ Describe what you think you think you want to do next.
+✍️ Well, next I will be heading on with preparation on clearing AZ-900  
 
 ## Social Proof
 
-✍️ Show that you shared your process on Twitter or LinkedIn
+✍️ 
 
-[link](link)
+https://www.linkedin.com/in/madhan-i-58241670/
+
+https://twitter.com/Madhan2712
