@@ -22,7 +22,7 @@ Hi, I am Madhan, a Enterprise Content Management developer based out in Chennai.
 
 - I started on searching cloud related learnings, webinars, challenges and I eventually ended up where I want to be, The “100DaysofCloud” community. I have never seen a community like this before, which has extra ordinary people and who are too helpful to groom my knowledge. 
 
-- I am positive that, I will gain more knowledge with the help from this community.
+- I am positive that, I will gain more knowledge help from this community.
 
 - As of now, I am in top 70 among 54639 participants in CloudDevJam Challenge by Google and Techgig.
 
