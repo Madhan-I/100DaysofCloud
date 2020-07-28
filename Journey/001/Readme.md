@@ -3,7 +3,7 @@
 
 # Build a Website using Google Kubernetes Engine on Google Cloud
 
-## We are going to create a website on google cloud using Google Kubernetes Engine with steps to complete the Challenge lab in Qwiklabs.
+## We are going to create a website on google cloud using Google Kubernetes Engine along with steps to complete the Challenge lab in Qwiklabs.
 
 This topic covers basic steps on how to create a monolithic web app into microservices, Deploying and exposing microservices deployed on GKE 
 
@@ -16,6 +16,7 @@ Basic knowledge on GCP would be handy.
 ## Use Case
 
 - 🖼️ (Show-Me) Create an graphic or diagram that illustrate the use-case of how this knowledge could be applied to real-world project
+
 - Your task is to take the company's existing monolithic e-commerce website and break it into a series of logically separated microservices. The existing monolith code is sitting in a GitHub repo, and you will be expected to containerize this app and then refactor it.
 - You will be tasked with pulling down the source code, building a container from it (one of the farmers left you a Dockerfile), and then pushing it out to GKE
 
@@ -26,25 +27,37 @@ Basic knowledge on GCP would be handy.
 
 ## Try yourself
 
-✍️ Add a mini tutorial to encourage the reader to get started learning something new about the cloud.
+✍️ We will be completing below steps, Hope its useful.
+
+- Building and refactoring a monolithic web app into microservices
+- Deploying microservices in GKE
+- Exposing the Services deployed on GKE
 
 ### Step 1 — Download the monolith code and build your container
 
 Log in to your new project, open up Cloud Shell.
 
-First things first, you'll need to clone your team's git repo. There's a setup.sh script in the root directory of the project that you'll need to run to get your monolith container built up.
+First we need to clone the team's git repo. There's a setup.sh script in the root directory of the project that you'll need to run to get your monolith container built up.
 
-After running the setup.sh script, there will be a few different projects that can be built and pushed.
+![s1](https://user-images.githubusercontent.com/55656091/88680811-850a1800-d10e-11ea-8917-147a2c808d3a.JPG)
+
+Next, Run the setup.sh to install the NodeJS dependencies for the monolith code
+
+![s2](https://user-images.githubusercontent.com/55656091/88681088-d31f1b80-d10e-11ea-9060-4a0a729962d9.JPG)
 
 Push the monolith build (conveniently located in the monolith directory) up to the Google Container Registry. There's a Dockerfile located in the ~/monotlith-to-microservices/monolith folder which you can use to build the application container.
 
 You will have to run Cloud Build (in that monolith folder) to build it, then push it up to GCR.
 
+Hint:
+
+Make sure that you submit a build named "fancytest" with a version of "1.0.0"
+
 ![Gcr](https://user-images.githubusercontent.com/55656091/88678209-d49b1480-d10b-11ea-9baf-6a289e7b669c.JPG)
 
-Make sure that you submit a build named "fancytest" with a version of "1.0.0".
+Solution:
 
-![Screenshot](https://via.placeholder.com/500x300)
+
 
 ### Step 2 — Create a kubernetes cluster and deploy the application
 
