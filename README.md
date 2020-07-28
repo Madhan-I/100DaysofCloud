@@ -31,7 +31,7 @@ Hi, I am Madhan, a Enterprise Content Management developer based out in Chennai.
 
 ## Stepping out the door
 
-- [ ] ☁️ 1 > [Day 01](Journey/001/Journey/001/Day 01.md)
+- [ ] ☁️ 1 > [Day 01](Journey/001/Day 01.md)
 - [ ] ☁️ 2 > [](Journey/002/Readme.md)
 - [ ] ☁️ 3 > [](Journey/003/Readme.md)
 - [ ] ☁️ 4 > [](Journey/004/Readme.md)
