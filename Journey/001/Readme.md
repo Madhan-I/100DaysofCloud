@@ -128,6 +128,7 @@ Create and expose your deployments as follows:
 NOTE: Please make note of the IP address of both the Orders and Products services once they have been exposed, you will need them in future steps.
 
 Name the deployment to be “orders” and “products”, and expose the services on port 80.
+
 Commands to deploy the Orders Microservice:
 
 ![T9](https://user-images.githubusercontent.com/55656091/88691159-1c289d00-d11a-11ea-9d30-904fd09dc13d.JPG)
@@ -136,7 +137,9 @@ Commands to deploy the Products Microservice:
 
 ![T91](https://user-images.githubusercontent.com/55656091/88691162-1cc13380-d11a-11ea-8d19-52ba893c1b36.JPG)
 
-COMMAND to Check the IP Address:   kubectl get all
+COMMAND to Check IP Address for Orders and Products:   
+
+kubectl get all
 
 You can verify that the deployments were successful and that the services have been exposed by going to the following URLs in your browser:
 
