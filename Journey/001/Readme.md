@@ -5,7 +5,11 @@
 
 ## We are going to create a website on google cloud using Google Kubernetes Engine along with steps to complete the Challenge lab in Qwiklabs.
 
-This topic covers basic steps on how to create a monolithic web app into microservices, Deploying and exposing microservices deployed on GKE 
+This topic covers below list of tasks, 
+
+- Building and refactoring a monolithic web app into microservices
+- Deploying microservices in GKE
+- Exposing the Services deployed on GKE
 
 ## Prerequisite
 I would recommend to go through Hands-on-Lab on building a Website on Google Cloud to get familiar, so that you will familiarize yourself on completing the challenge lab without scrolling down.
