@@ -40,16 +40,19 @@ Log in to your new project, open up Cloud Shell.
 First you need to clone the team's git repo. There's a setup.sh script in the root directory of the project that you'll need to run to get your monolith container built up.
 
 COMMAND:
+
 ![s1](https://user-images.githubusercontent.com/55656091/88682807-bc79c400-d110-11ea-805b-972a6fa08a2e.JPG)
 
 Next, Run the setup.sh to install the NodeJS dependencies for the monolith code
 
 COMMAND:
+
 ![s2](https://user-images.githubusercontent.com/55656091/88682844-c7ccef80-d110-11ea-862a-e6382adb16ae.JPG)
 
 Before building the Docker container, you can preview the monolith application on port 8080 by running the following commands to start the web server:
 
 COMMAND:
+
 ![s3](https://user-images.githubusercontent.com/55656091/88682923-dd421980-d110-11ea-8675-cb16b3011de0.JPG)
 
 Next Push the monolith build (conveniently located in the monolith directory) up to the Google Container Registry. There's a Dockerfile located in the ~/monotlith-to-microservices/monolith folder which you can use to build the application container.
@@ -63,6 +66,7 @@ Name your artifact as follows:
 ![S5](https://user-images.githubusercontent.com/55656091/88684300-54c47880-d112-11ea-8ceb-cd3c38c68408.JPG)
 
 COMMAND:
+
 ![s4](https://user-images.githubusercontent.com/55656091/88683255-37db7580-d111-11ea-8470-0a2a67ccc00b.JPG)
 
 ### Step 2 — Create a kubernetes cluster and deploy the application
